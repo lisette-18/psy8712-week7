@@ -13,3 +13,12 @@ week7_tbl <- read_csv("../data/week3.csv") %>%
   mutate(timeSpent = timeEnd - timeStart) %>% #convert timeSpent
   filter(q6 == 1) %>% #q6 <- subset(q6 == 1) #responded 1 to question 6
   select(-q6) #drop q6 overall
+
+
+
+
+
+#Visualization
+week7_tbl %>%
+  select(q1:q10) %>%
+  ggpairs
