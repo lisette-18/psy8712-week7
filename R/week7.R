@@ -38,3 +38,10 @@ week7_tbl %>%
   facet_grid(cols=vars(gender)) +
   labs(x = "Score on Q1", y = "Score on Q2")) %>%
   ggsave("../figs/fig3.png",.)
+
+
+(ggplot(week7_tbl, aes(x = gender, y = timeSpent))+
+  geom_boxplot() +
+  labs(x = "Gender", y = "Time Elapsed (mins)")) %>%
+  ggsave("../figs/fig4.png",.)
+
